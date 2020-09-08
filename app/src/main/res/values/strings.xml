@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Skane Breweries</string>
+    <string name="tab_menu_map_string">Map</string>
+    <string name="tab_menu_list_string">List</string>
+    <string name="toolbar_menu_info">Information</string>
+    <string name="brewery_image_alt_text">An image of the brewery you have selected</string>
 </resources>

@@ -3,12 +3,13 @@ package com.wisechimp.skanebreweries
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class BreweryScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        setContentView(R.layout.activity_brewery_screen)
+        setSupportActionBar(findViewById(R.id.toolbar_brewery))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

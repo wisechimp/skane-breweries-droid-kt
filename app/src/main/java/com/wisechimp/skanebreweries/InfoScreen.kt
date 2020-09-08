@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 
-class MainActivity : AppCompatActivity() {
+class InfoScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        setSupportActionBar(findViewById(R.id.toolbar))
+        setContentView(R.layout.activity_info_screen)
+        setSupportActionBar(findViewById(R.id.toolbar_info))
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
