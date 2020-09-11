@@ -1,4 +1,4 @@
-package com.wisechimp.skanebreweries
+package com.wisechimp.skanebreweries.homescreen
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.util.Log
 import android.view.Menu
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.wisechimp.skanebreweries.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 const val TAG : String = "Main Activity"
