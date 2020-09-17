@@ -7,7 +7,7 @@ import android.view.Menu
 class InfoScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_info_screen)
+        setContentView(R.layout.fragment_app_info)
         setSupportActionBar(findViewById(R.id.toolbar_info))
     }
 
