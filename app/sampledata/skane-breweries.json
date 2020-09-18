@@ -1,0 +1,23 @@
+[
+  {
+    "name": "1413 Bryggkultur",
+    "description": "Vi lockades av tanken att skapa ett hantverk. Ett hantverk som symboliserar vem vi är och var vi hör hemma. Efter att vi upptäckt möjligheterna med hembryggning, så blev viljan stark att lyfta det till något större. Men samtidigt är vi noga med att det skall vara något mindre.\n\nVår idé är att komponera öl som speglar en modern och klassisk känsla i ett. Att låta ölet förbli ofiltrerat och opastöriserat för sinnenas upplevelse, som man gjorde förr. Att låta smaker av nya humlesorter bana vägen för det moderna.\n\nLandskrona är vackert och vi vill framhäva det med våra goda öl. Vi hoppas att få delta i stadens fortsatta utveckling, samtidigt som vi önskar att du får en unik smakupplevelse när du dricker vårt hantverk.\n\n1413 Bryggkultur är två familjer från Landskrona som brinner för kvalitet, hantverk och god öl. Vi har nyligen påbörjat vår resa och vår förhoppning är att du vill följa med på den.",
+    "founded": "2014",
+    "location": "Landskrona",
+    "brewers": "Johan Laurin and Daniel Nyman"
+  },
+  {
+    "name": "Brewski",
+    "description": "Brewski don't do beer. Beer do Brewski!",
+    "founded": "2014",
+    "location": "Helsingborg",
+    "brewers": "Marcus Hjalmarsson"
+  },
+  {
+    "name": "Uncharted Brewery",
+    "description": "The Uncharted Brewing Company was founded by Irishman Diarmuid Reidy in 2016, after moving with his young family to Sweden. He was driven by a desire to make good beer and share it with the world.\n\nDiarmuid grew up on a dairy farm in the south west part of Ireland. He studied to become a Mechanical Engineer but has since worked in IT.",
+    "founded": "2016",
+    "location": "Eslov",
+    "brewers": "Diamuid Reidy"
+  }
+]

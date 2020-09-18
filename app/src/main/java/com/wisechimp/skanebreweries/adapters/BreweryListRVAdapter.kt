@@ -6,9 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.wisechimp.skanebreweries.R
+import com.wisechimp.skanebreweries.database.Brewery
 import kotlinx.android.synthetic.main.brewery_rv_row.view.*
 
-class BreweryListRVAdapter(private val breweries: Array<String>): RecyclerView.Adapter<BreweryListRVAdapter.BreweryListViewHolder>() {
+class BreweryListRVAdapter(private val breweries: MutableList<Brewery>): RecyclerView.Adapter<BreweryListRVAdapter.BreweryListViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -23,7 +24,8 @@ class BreweryListRVAdapter(private val breweries: Array<String>): RecyclerView.A
         holder: BreweryListViewHolder,
         position: Int
     ) {
-        holder.itemView.brewery_rv_row_textView.text = breweries[position]
+        holder.itemView.brewery_rv_row_textView.text = breweries[position].name
+        Log.d("Brewery List Adapter", breweries[position].name)
     }
 
     override fun getItemCount() =breweries.size
