@@ -17,17 +17,5 @@ class MainActivity : AppCompatActivity() {
         Mapbox.getInstance(this, BuildConfig.MAPBOX_ACCESS_TOKEN)
 
         setContentView(R.layout.activity_main)
-
-        val db = Firebase.firestore
-        db.collection("skane-breweries")
-            .get()
-            .addOnSuccessListener { result ->
-                for (document in result) {
-                    Log.d(TAG, "${document.id} => ${document.data}")
-                }
-            }
-            .addOnFailureListener { exception ->
-                Log.w(TAG, "Error getting documents.", exception)
-            }
     }
 }
