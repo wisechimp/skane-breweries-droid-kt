@@ -1,11 +1,10 @@
 package com.wisechimp.skanebreweries.ui
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
@@ -13,6 +12,7 @@ import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.adapters.BreweryListRVAdapter
 import com.wisechimp.skanebreweries.database.Brewery
 import kotlinx.android.synthetic.main.fragment_brewery_list.view.*
+import timber.log.Timber
 
 class BreweryListFragment : Fragment() {
 
@@ -38,13 +38,13 @@ class BreweryListFragment : Fragment() {
 
         val breweryListener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                if(snapshot.exists()){
+                if (snapshot.exists()) {
                     breweries.clear()
                     for (e in snapshot.children) {
                         val brewery = e.getValue(Brewery::class.java)
                         if (brewery != null) {
                             breweries.add(brewery)
-                            Log.d("Brewery", brewery.toString())
+                            Timber.d(brewery.toString())
                         }
                     }
                     breweriesList.adapter = BreweryListRVAdapter(breweries)
@@ -52,10 +52,10 @@ class BreweryListFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Log.w("Brewery List", "Adding brewery SNAFU", error.toException())
+                Timber.w(error.toException(), "Adding brewery SNAFU")
             }
         }
         database.addValueEventListener(breweryListener)
-        Log.d("BreweryListFragment", breweries.toString())
+        Timber.d(breweries.toString())
     }
 }
