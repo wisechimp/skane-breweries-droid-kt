@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
@@ -29,8 +28,11 @@ class TabbedMenuFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val toolbar = toolbar_tabs
+        
         tabsAdapter = TabsAdapter(this)
         viewPager = tabViewPager
+        viewPager.isUserInputEnabled = false
         viewPager.adapter = tabsAdapter
 
         TabLayoutMediator(navTabLayout, viewPager) {
