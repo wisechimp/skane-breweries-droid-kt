@@ -4,11 +4,13 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 import com.wisechimp.skanebreweries.R
+import com.wisechimp.skanebreweries.adapters.BreweryClickListener
 import com.wisechimp.skanebreweries.adapters.BreweryListRVAdapter
 import com.wisechimp.skanebreweries.database.Brewery
 import kotlinx.android.synthetic.main.fragment_brewery_list.view.*
@@ -29,12 +31,14 @@ class BreweryListFragment : Fragment() {
         view.breweriesList.setHasFixedSize(true)
         view.breweriesList.layoutManager = LinearLayoutManager(activity)
         accessFirebaseDatabase(view.breweriesList)
+        Timber.d("View created?")
 
         return view
     }
 
     private fun accessFirebaseDatabase(breweriesList: RecyclerView) {
         database = FirebaseDatabase.getInstance().reference
+        Timber.d("Database Created")
 
         val breweryListener = object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -47,7 +51,9 @@ class BreweryListFragment : Fragment() {
                             Timber.d(brewery.toString())
                         }
                     }
-                    breweriesList.adapter = BreweryListRVAdapter(breweries)
+                    breweriesList.adapter = BreweryListRVAdapter(breweries, BreweryClickListener {
+                        Toast.makeText(activity, "$it", Toast.LENGTH_LONG).show()
+                    })
                 }
             }
 

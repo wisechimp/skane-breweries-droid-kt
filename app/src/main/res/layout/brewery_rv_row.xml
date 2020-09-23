@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!--<data>
+    <data>
+        <variable
+            name="brewery"
+            type="com.wisechimp.skanebreweries.database.Brewery" />
         <variable
             name="clickListener"
-            type="com.wisechimp.skanebreweries.adapters.BreweryListRVAdapter"/>
-    </data>-->
+            type="com.wisechimp.skanebreweries.adapters.BreweryClickListener"/>
+    </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:onClick="@{() -> clickListener.onClick(brewery)}"
         >
+
 
         <TextView
             android:id="@+id/brewery_rv_row_textView"
@@ -21,7 +26,8 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:gravity="center|start"
-            android:text="@string/dummy_text"
+            tools:text="@string/dummy_text"
+            app:breweryNameString="@{brewery}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

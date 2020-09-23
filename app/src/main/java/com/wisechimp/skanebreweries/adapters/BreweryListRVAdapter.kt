@@ -1,44 +1,48 @@
 package com.wisechimp.skanebreweries.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.database.Brewery
-import kotlinx.android.synthetic.main.brewery_rv_row.view.*
+import com.wisechimp.skanebreweries.databinding.BreweryRvRowBinding
+import timber.log.Timber
 
-class BreweryListRVAdapter(private val breweries: MutableList<Brewery>): RecyclerView.Adapter<BreweryListRVAdapter.BreweryListViewHolder>() {
+class BreweryListRVAdapter(private val breweries: MutableList<Brewery>, private val clickListener: BreweryClickListener): RecyclerView.Adapter<BreweryViewHolder>() {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): BreweryListViewHolder {
-        val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.brewery_rv_row, parent, false)
-        return BreweryListViewHolder(view)
+    ): BreweryViewHolder {
+        return BreweryViewHolder.from(parent)
     }
 
     override fun onBindViewHolder(
-        holder: BreweryListViewHolder,
+        holder: BreweryViewHolder,
         position: Int
     ) {
-        holder.itemView.brewery_rv_row_textView.text = breweries[position].name
-        Log.d("Brewery List Adapter", breweries[position].name)
+        holder.bind(breweries[position], clickListener)
+        Timber.d(breweries[position].name)
     }
 
     override fun getItemCount() =breweries.size
+}
 
-    class BreweryListViewHolder(v: View): RecyclerView.ViewHolder(v), View.OnClickListener {
-        private var view: View = v
+class BreweryViewHolder private constructor(private val binding: BreweryRvRowBinding): RecyclerView.ViewHolder(binding.root){
+    fun bind(item: Brewery, clickListener: BreweryClickListener) {
+        binding.brewery = item
+        binding.clickListener = clickListener
+        binding.executePendingBindings()
+    }
 
-        init {
-            v.setOnClickListener(this)
-        }
-
-        override fun onClick(v: View?) {
-            Log.d("Brewery RV", "I want this brewery!")
+    companion object {
+        fun from(parent: ViewGroup): BreweryViewHolder {
+            val layoutInflater = LayoutInflater.from(parent.context)
+            val binding = BreweryRvRowBinding.inflate(layoutInflater, parent, false)
+            return BreweryViewHolder(binding)
         }
     }
+}
+
+class BreweryClickListener(val clickListener: (breweryId: Int) -> Unit) {
+    fun onClick(brewery: Brewery) = brewery.id?.let { clickListener(it) }
 }
