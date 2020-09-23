@@ -14,6 +14,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        if(BuildConfig.DEBUG){
+            Timber.plant(Timber.DebugTree())
+        }
+
         Mapbox.getInstance(this, BuildConfig.MAPBOX_ACCESS_TOKEN)
 
         setContentView(R.layout.activity_main)
