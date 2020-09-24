@@ -1,4 +1,4 @@
-package com.wisechimp.skanebreweries.screens.ui
+package com.wisechimp.skanebreweries.screens.main.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
