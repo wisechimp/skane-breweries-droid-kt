@@ -1,4 +1,4 @@
-package com.wisechimp.skanebreweries.screens.ui
+package com.wisechimp.skanebreweries.screens.main.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,7 +7,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -24,7 +25,6 @@ class BreweryListFragment : Fragment() {
 
     private lateinit var database: DatabaseReference
     private val breweries: MutableList<Brewery> = mutableListOf()
-    private val viewModel: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -58,6 +58,7 @@ class BreweryListFragment : Fragment() {
                     }
                     breweriesList.adapter = BreweryListRVAdapter(breweries, BreweryClickListener {
                         Toast.makeText(activity, "$it", Toast.LENGTH_LONG).show()
+                        findNavController().navigate(R.id.action_tabbedMenuFragment_to_breweryInfoActivity)
                     })
                 }
             }

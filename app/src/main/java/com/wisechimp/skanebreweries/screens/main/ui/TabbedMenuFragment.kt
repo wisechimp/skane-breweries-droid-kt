@@ -1,4 +1,4 @@
-package com.wisechimp.skanebreweries.screens.ui
+package com.wisechimp.skanebreweries.screens.main.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.wisechimp.skanebreweries.screens.main.MainViewModel
@@ -19,7 +17,6 @@ import timber.log.Timber
 class TabbedMenuFragment: Fragment() {
 
     private lateinit var tabsAdapter: TabsAdapter
-    private val viewModel: MainViewModel by activityViewModels()
     private lateinit var viewPager: ViewPager2
 
     override fun onCreateView(
@@ -33,16 +30,10 @@ class TabbedMenuFragment: Fragment() {
         return tabbedView
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        activity.run {
-            viewModel.updateActionBarTitle("Skane Breweries")
-            Timber.d("Are we running?")
-        }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        toolbar_tabs.title = "Skane Breweries"
 
         tabsAdapter = TabsAdapter(this)
 
