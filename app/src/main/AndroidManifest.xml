@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".screens.brewery.BreweryInfoActivity" />
+        <activity
+            android:name=".screens.brewery.BreweryInfoActivity"
+            android:parentActivityName="com.wisechimp.skanebreweries.screens.main.MainActivity" />
     </application>
 
 </manifest>

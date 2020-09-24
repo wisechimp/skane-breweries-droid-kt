@@ -10,5 +10,6 @@ class BreweryInfoActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_brewery_info)
         setSupportActionBar(toolbar_brewery)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 }
