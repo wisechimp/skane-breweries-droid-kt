@@ -43,6 +43,6 @@ class BreweryViewHolder private constructor(private val binding: BreweryRvRowBin
     }
 }
 
-class BreweryClickListener(val clickListener: (breweryId: Int) -> Unit) {
-    fun onClick(brewery: Brewery) = brewery.id?.let { clickListener(it) }
+class BreweryClickListener(val clickListener: (brewery: Brewery) -> Unit) {
+    fun onClick(brewery: Brewery) = clickListener(brewery)
 }
