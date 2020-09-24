@@ -25,10 +25,5 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar_tabs)
 
-        val viewModel: MainViewModel by viewModels()
-        viewModel.title.observe(this, Observer {
-            toolbar_tabs.title = it
-            Timber.d("Are we observing?")
-        })
     }
 }
