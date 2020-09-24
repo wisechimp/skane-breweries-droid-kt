@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.BreweryMapFragment">
+    tools:context=".screens.ui.BreweryMapFragment">
 
     <com.mapbox.mapboxsdk.maps.MapView
         android:id="@+id/breweryMapView"

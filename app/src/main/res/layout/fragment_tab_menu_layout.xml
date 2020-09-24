@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.BreweryMapFragment">
+    tools:context=".screens.ui.BreweryMapFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_tabs"
