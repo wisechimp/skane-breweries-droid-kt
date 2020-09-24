@@ -1,10 +1,12 @@
-package com.wisechimp.skanebreweries
+package com.wisechimp.skanebreweries.screens.main
 
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.mapbox.mapboxsdk.Mapbox
+import com.wisechimp.skanebreweries.BuildConfig
+import com.wisechimp.skanebreweries.R
 import kotlinx.android.synthetic.main.fragment_tab_menu_layout.*
 import timber.log.Timber
 
