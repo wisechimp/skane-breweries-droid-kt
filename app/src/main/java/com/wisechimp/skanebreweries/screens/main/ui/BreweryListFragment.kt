@@ -6,9 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -17,7 +14,6 @@ import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.adapters.BreweryClickListener
 import com.wisechimp.skanebreweries.adapters.BreweryListRVAdapter
 import com.wisechimp.skanebreweries.database.Brewery
-import com.wisechimp.skanebreweries.screens.main.MainViewModel
 import kotlinx.android.synthetic.main.fragment_brewery_list.view.*
 import timber.log.Timber
 
@@ -57,8 +53,9 @@ class BreweryListFragment : Fragment() {
                         }
                     }
                     breweriesList.adapter = BreweryListRVAdapter(breweries, BreweryClickListener {
-                        Toast.makeText(activity, "$it", Toast.LENGTH_LONG).show()
-                        findNavController().navigate(R.id.action_tabbedMenuFragment_to_breweryInfoActivity)
+                        val clickedBrewery = it
+                        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoActivity(clickedBrewery)
+                        findNavController().navigate(clickBrewery)
                     })
                 }
             }

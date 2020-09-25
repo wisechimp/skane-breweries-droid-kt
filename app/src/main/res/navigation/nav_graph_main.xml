@@ -18,6 +18,8 @@
         android:name="com.wisechimp.skanebreweries.screens.brewery.BreweryInfoActivity"
         android:label="activity_brewery_info"
         tools:layout="@layout/activity_brewery_info" >
-        <argument android:name="brewery" />
+        <argument
+            android:name="brewery"
+            app:argType="com.wisechimp.skanebreweries.database.Brewery" />
     </activity>
 </navigation>
