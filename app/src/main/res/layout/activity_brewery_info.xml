@@ -43,7 +43,7 @@
                 tools:context=".screens.brewery.BreweryInfoActivity">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/breweryImageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
@@ -55,18 +55,44 @@
                     app:srcCompat="@drawable/generic_brewery" />
 
                 <TextView
-                    android:id="@+id/breweryTextView"
+                    android:id="@+id/breweryLocationTV"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
+                    android:text="@{breweryInfoViewModel.chosenBrewery.location}"
+                    app:layout_constraintBottom_toTopOf="@id/breweryDescriptionTV"
+                    app:layout_constraintEnd_toStartOf="@id/breweryFoundedTV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/breweryImageView" />
+
+                <TextView
+                    android:id="@+id/breweryFoundedTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@{breweryInfoViewModel.chosenBrewery.founded}"
+                    app:layout_constraintBottom_toTopOf="@id/breweryDescriptionTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/breweryLocationTV"
+                    app:layout_constraintTop_toBottomOf="@id/breweryImageView" />
+
+                <TextView
+                    android:id="@+id/breweryDescriptionTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
                     android:text="@{breweryInfoViewModel.chosenBrewery.description}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>
