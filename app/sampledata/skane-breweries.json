@@ -6,7 +6,9 @@
     "founded": "2014",
     "location": "Landskrona",
     "brewers": "Johan Laurin and Daniel Nyman",
-    "imageFileName": "1413Brewery.jpg"
+    "imageFileName": "1413Brewery.jpg",
+    "onlinePresence": "Website",
+    "addressUrl": "http://1413.se/"
   },
   {
     "id": 10001,
@@ -15,7 +17,9 @@
     "founded": "2014",
     "location": "Helsingborg",
     "brewers": "Marcus Hjalmarsson",
-    "imageFileName": "Brewski.jpg"
+    "imageFileName": "Brewski.jpg",
+    "onlinePresence": "Facebook",
+    "addressUrl": "https://www.facebook.com/brewski.se"
   },
   {
     "id": 10002,
@@ -24,6 +28,8 @@
     "founded": "2016",
     "location": "Eslov",
     "brewers": "Diamuid Reidy",
-    "imageFileName": "UnchartedBrewery.jpg"
+    "imageFileName": "UnchartedBrewery.jpg",
+    "onlinePresence": "Website",
+    "addressUrl": "http://www.uncharted-brewing.com/"
   }
 ]

@@ -10,10 +10,14 @@ data class Brewery(
     var founded: String? = "",
     var location: String? = "",
     var brewers: String? = "",
-    var imageFileName: String? = ""
+    var imageFileName: String? = "",
+    var onlinePresence: String? = "",
+    var addressUrl: String? = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -31,6 +35,8 @@ data class Brewery(
         parcel.writeString(location)
         parcel.writeString(brewers)
         parcel.writeString(imageFileName)
+        parcel.writeString(onlinePresence)
+        parcel.writeString(addressUrl)
     }
 
     override fun describeContents(): Int {

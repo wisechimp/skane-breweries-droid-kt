@@ -90,9 +90,42 @@
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="8dp"
                     android:text="@{breweryInfoViewModel.chosenBrewery.description}"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/breweryLocationTV"
+                    app:layout_constraintBottom_toTopOf="@id/breweryMoreInfoTV"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/breweryMoreInfoTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/brewery_learn_more"
+                    app:layout_constraintTop_toBottomOf="@id/breweryDescriptionTV"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/breweryVisitButt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    />
+
+                <Button
+                    android:id="@+id/breweryVisitButt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@color/colorPrimaryDark"
+                    and
+                    android:textColor="@color/colorSecondary"
+                    android:text="@{breweryInfoViewModel.chosenBrewery.onlinePresence}"
+                    app:layout_constraintTop_toBottomOf="@id/breweryDescriptionTV"
+                    app:layout_constraintStart_toEndOf="@id/breweryMoreInfoTV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.core.widget.NestedScrollView>

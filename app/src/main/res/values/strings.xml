@@ -5,4 +5,5 @@
     <string name="toolbar_menu_info">Information</string>
     <string name="brewery_image_alt_text">An image of the brewery you have selected</string>
     <string name="dummy_text">dummy text</string>
+    <string name="brewery_learn_more">Learn more:</string>
 </resources>
