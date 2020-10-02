@@ -5,14 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
-import com.wisechimp.skanebreweries.screens.main.MainViewModel
 import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.adapters.TabsAdapter
 import kotlinx.android.synthetic.main.fragment_tab_menu_layout.*
-import timber.log.Timber
 
 class TabbedMenuFragment: Fragment() {
 
@@ -24,16 +21,11 @@ class TabbedMenuFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val tabbedView = inflater.inflate(R.layout.fragment_tab_menu_layout, container, false)
-        setHasOptionsMenu(true)
-
-        return tabbedView
+        return inflater.inflate(R.layout.fragment_tab_menu_layout, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        toolbar_tabs.title = "Skane Breweries"
 
         tabsAdapter = TabsAdapter(this)
 
