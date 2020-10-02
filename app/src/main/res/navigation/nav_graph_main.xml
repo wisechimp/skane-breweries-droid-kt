@@ -7,19 +7,34 @@
     <fragment
         android:id="@+id/tabbedMenuFragment"
         android:name="com.wisechimp.skanebreweries.screens.main.ui.TabbedMenuFragment"
-        android:label="TabbedMenuFragment" >
+        android:label="Skåne Breweries" >
         <action
-            android:id="@+id/action_tabbedMenuFragment_to_breweryInfoActivity"
-            app:destination="@id/breweryInfoActivity" />
+            android:id="@+id/action_tabbedMenuFragment_to_breweryInfoFragment"
+            app:destination="@id/breweryInfoFragment" />
     </fragment>
 
-    <activity
-        android:id="@+id/breweryInfoActivity"
-        android:name="com.wisechimp.skanebreweries.screens.brewery.BreweryInfoActivity"
-        android:label="activity_brewery_info"
-        tools:layout="@layout/activity_brewery_info" >
+    <fragment
+        android:id="@+id/breweryInfoFragment"
+        android:name="com.wisechimp.skanebreweries.screens.brewery.ui.BreweryInfoFragment"
+        android:label="breweryInfoFragment" >
+        <action
+            android:id="@+id/action_breweryInfoFragment_to_breweryWebsiteFragment"
+            app:destination="@id/breweryWebsiteFragment" />
         <argument
             android:name="brewery"
             app:argType="com.wisechimp.skanebreweries.database.Brewery" />
-    </activity>
+    </fragment>
+
+    <fragment
+        android:id="@+id/breweryWebsiteFragment"
+        android:name="com.wisechimp.skanebreweries.screens.brewerywebview.BreweryWebsiteFragment"
+        android:label="{breweryAddressName}"
+        tools:layout="@layout/fragment_brewery_website" >
+        <argument
+            android:name="breweryAddressUrl"
+            app:argType="string" />
+        <argument
+            android:name="breweryAddressName"
+            app:argType="string" />
+    </fragment>
 </navigation>
