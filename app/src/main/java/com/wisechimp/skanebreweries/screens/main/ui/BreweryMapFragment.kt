@@ -4,18 +4,23 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import android.widget.Toast.LENGTH_LONG
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
 import com.mapbox.mapboxsdk.maps.Style
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.Moshi
+import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.wisechimp.skanebreweries.R
+import com.wisechimp.skanebreweries.database.Brewery
 import kotlinx.android.synthetic.main.fragment_brewery_map.*
+import timber.log.Timber
 
 class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
 
+    private lateinit var mapboxMap: MapboxMap
     private lateinit var mapView: MapView
 
     override fun onCreateView(
@@ -32,6 +37,7 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
         mapView.onCreate(savedInstanceState)
 
         mapView.getMapAsync { mapboxMap ->
+            this.mapboxMap = mapboxMap
             mapboxMap.setStyle(Style.Builder().fromUri("mapbox://styles/wisechimp/ckfcbn7vt1sgl19mrfr9nmqz6"))
 
             mapboxMap.addOnMapClickListener(this)
@@ -39,8 +45,31 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
     }
 
     override fun onMapClick(point: LatLng): Boolean {
-        val testToast = Toast.makeText(this.context, point.toString(), LENGTH_LONG)
-        testToast.show()
+        Timber.d(point.toString())
+        val pixel = mapboxMap.projection.toScreenLocation(point)
+        val features = mapboxMap.queryRenderedFeatures(pixel, "skane-breweries")
+
+        if (features.size > 0) {
+            val feature = features[0]
+            val clickedBrewery: Brewery? =  parseBreweryFeatureJson(feature.properties().toString())
+            navigateToBrewery(clickedBrewery!!)
+        }
         return true
+    }
+
+    private fun parseBreweryFeatureJson(string: String): Brewery? {
+        val moshi = Moshi.Builder().addLast(KotlinJsonAdapterFactory()).build()
+        val jsonAdapter: JsonAdapter<Brewery> = moshi.adapter(Brewery::class.java)
+
+        val brewery = jsonAdapter.fromJson(string)
+        Timber.d(brewery.toString())
+        return brewery
+    }
+    
+    private fun navigateToBrewery (brewery: Brewery) {
+        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(
+            brewery!!
+        )
+        findNavController().navigate(clickBrewery)
     }
 }
