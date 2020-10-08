@@ -52,9 +52,10 @@ class BreweryListFragment : Fragment() {
                         }
                     }
                     breweriesList.adapter = BreweryListRVAdapter(breweries, BreweryClickListener {
-                        val clickedBrewery = it
+                        /*val clickedBrewery = it
                         val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(clickedBrewery)
-                        findNavController().navigate(clickBrewery)
+                        findNavController().navigate(clickBrewery)*/
+                        navigateToBrewery(it)
                     })
                 }
             }
@@ -65,5 +66,12 @@ class BreweryListFragment : Fragment() {
         }
         database.addValueEventListener(breweryListener)
         Timber.d(breweries.toString())
+    }
+
+    private fun navigateToBrewery (brewery: Brewery) {
+        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(
+            brewery
+        )
+        findNavController().navigate(clickBrewery)
     }
 }

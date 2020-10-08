@@ -68,7 +68,7 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
     
     private fun navigateToBrewery (brewery: Brewery) {
         val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(
-            brewery!!
+            brewery
         )
         findNavController().navigate(clickBrewery)
     }
