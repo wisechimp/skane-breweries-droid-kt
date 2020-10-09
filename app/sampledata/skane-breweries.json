@@ -12,6 +12,17 @@
   },
   {
     "id": 10001,
+    "name": "Brekeriet",
+    "description": "Brekeriet är ett skånskt bryggeri och ölimportör som alltid har som intention att leverera den maximala smakupplevelsen till såväl kund som slutkund.\n\n \n\nBrekeriet är de tre bröderna Fredrik, Christian, och André Ek, i åldersordning äldst till yngst. Med ett stort ölintresse i ryggsäcken är vårt gemensamma mål att öka medvetenheten för annorlunda och bra öl hos gemene man.\n\n \n\nIdén med att börja importera öl växte fram under våren 2010, med drömmen om att i framtiden starta ett eget bryggeri, och knappt två år efter starten meddelades att ett bryggeri höll på att utformas utanför Malmö. Den 27:e september 2012 hade Brekeriets egenbrygda öl premiär på Stockholm Beer and Whisky Festival, och emottagandet var stort.\n\n \n\nMed vår kunskap inom tillverkning av öl, samtidigt som vi ständigt botaniserar i ölets värld, vill vi tillverka och leverera öl där smaken av både äkthet och bryggarkärlek är representerad.\n\nFölj med oss på vår resa!",
+    "founded": "2012",
+    "location": "Landskrona",
+    "brewers": "The Brothers Ek - Fredrik, Christian and Andre",
+    "imageFileName": "Brekeriet.jpg",
+    "onlinePresence": "Website",
+    "addressUrl": "https://www.brekeriet.se/"
+  },
+  {
+    "id": 10002,
     "name": "Brewski",
     "description": "Brewski don't do beer. Beer do Brewski!",
     "founded": "2014",
@@ -22,7 +33,7 @@
     "addressUrl": "https://www.facebook.com/brewski.se"
   },
   {
-    "id": 10002,
+    "id": 10003,
     "name": "Uncharted Brewery",
     "description": "The Uncharted Brewing Company was founded by Irishman Diarmuid Reidy in 2016, after moving with his young family to Sweden. He was driven by a desire to make good beer and share it with the world.\n\nDiarmuid grew up on a dairy farm in the south west part of Ireland. He studied to become a Mechanical Engineer but has since worked in IT.",
     "founded": "2016",
