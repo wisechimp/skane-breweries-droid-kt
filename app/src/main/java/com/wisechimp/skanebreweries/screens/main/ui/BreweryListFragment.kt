@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.adapters.BreweryClickListener
 import com.wisechimp.skanebreweries.adapters.BreweryListRVAdapter
 import com.wisechimp.skanebreweries.database.Brewery
+import com.wisechimp.skanebreweries.utils.navigateToBrewery
 import kotlinx.android.synthetic.main.fragment_brewery_list.view.*
 import timber.log.Timber
 
@@ -52,10 +54,7 @@ class BreweryListFragment : Fragment() {
                         }
                     }
                     breweriesList.adapter = BreweryListRVAdapter(breweries, BreweryClickListener {
-                        /*val clickedBrewery = it
-                        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(clickedBrewery)
-                        findNavController().navigate(clickBrewery)*/
-                        navigateToBrewery(it)
+                        navigateToBrewery(activity as AppCompatActivity, it)
                     })
                 }
             }
@@ -66,12 +65,5 @@ class BreweryListFragment : Fragment() {
         }
         database.addValueEventListener(breweryListener)
         Timber.d(breweries.toString())
-    }
-
-    private fun navigateToBrewery (brewery: Brewery) {
-        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(
-            brewery
-        )
-        findNavController().navigate(clickBrewery)
     }
 }

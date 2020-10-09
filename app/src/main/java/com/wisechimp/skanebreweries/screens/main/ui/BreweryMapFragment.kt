@@ -4,8 +4,8 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.mapbox.mapboxsdk.geometry.LatLng
 import com.mapbox.mapboxsdk.maps.MapView
 import com.mapbox.mapboxsdk.maps.MapboxMap
@@ -15,6 +15,7 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.wisechimp.skanebreweries.R
 import com.wisechimp.skanebreweries.database.Brewery
+import com.wisechimp.skanebreweries.utils.navigateToBrewery
 import kotlinx.android.synthetic.main.fragment_brewery_map.*
 import timber.log.Timber
 
@@ -52,7 +53,7 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
         if (features.size > 0) {
             val feature = features[0]
             val clickedBrewery: Brewery? =  parseBreweryFeatureJson(feature.properties().toString())
-            navigateToBrewery(clickedBrewery!!)
+            navigateToBrewery(activity as AppCompatActivity, clickedBrewery!!)
         }
         return true
     }
@@ -64,12 +65,5 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
         val brewery = jsonAdapter.fromJson(string)
         Timber.d(brewery.toString())
         return brewery
-    }
-    
-    private fun navigateToBrewery (brewery: Brewery) {
-        val clickBrewery = TabbedMenuFragmentDirections.actionTabbedMenuFragmentToBreweryInfoFragment(
-            brewery
-        )
-        findNavController().navigate(clickBrewery)
     }
 }
