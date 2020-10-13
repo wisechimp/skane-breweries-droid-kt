@@ -23,7 +23,7 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [12.7021226, 56.0330575]
+        "coordinates": [12.8356259, 55.8807779]
       },
       "properties": {
         "id": 10001,
@@ -59,10 +59,136 @@
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [13.309099, 55.8452379]
+        "coordinates": [13.8376995, 55.7871136]
       },
       "properties": {
         "id": 10003,
+        "name": "Bryggeri NollFyraSex",
+        "description": "Bryggeri NollFyraSex är ett litet mikrobryggeri med tillverkningslokal i Kävlinge. Vi är två grabbar från Lund som nu förverkligar en dröm. Vi tror på att göra öl som vi själva gillar.\n\nMikrobryggeriet kommer få växa i lugn takt utifrån efterfrågan och den tid vi kan lägga ned. Långsamt men säkert skulle man kunna säga.\nHantverksbryggd, lokalt producerad från Lund!",
+        "founded": "2015",
+        "location": "Kävlinge",
+        "brewers": "Andreas Eriksson och Niklas Johansson",
+        "imageFileName": "BryggeriNollFyraSex.jpg",
+        "onlinePresence": "Website",
+        "addressUrl": "https://www.nollfyrasex.se/information/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.829305, 55.8662155]
+      },
+      "properties": {
+        "id": 10004,
+        "name": "Brygghuset Finn",
+        "description": "Historien om bryggeriet är en som börjar i skolbänken, närmare bestämt skolbänken på Lunds Tekniska Högskola. De tre av oss som grundade bryggeriet tillsammans, Jonatan, Petter och Simon, pluggade under några år tillsammans på programmet för teknisk fysik. Som en del av de obligatoriska kurserna i programmet läste vi en kurs i entrepenörsskap där man skulle lägga upp en affärsplan för ett fiktivt bolag. Ölentusiaster som vi är kände vi direkt vad vi ville göra, ett bryggeri såklart!\n\n \n\nEfter en tids arbete med projektet började en känsla av oväntat stor entusiasm över idén infinna sig. Vi började bygga vårt första bryggverk av en för ändamålet inköpt kylväska i plast som vi (ingenjörer som vi är) glatt började modifiera efter konstens.. ännu inte så många regler. Redan den första batchen IPA blev ganska bra och efter en tids idogt bryggande började vi närma oss något som kunde liknas vid en slutprodukt.\n\n \n\nEn tid senare började vi bygga på vår nästa generations bryggverk. Denna gången byggdes det av ett rostfritt expansionskärl från ett värmesystem och kunde rymma den otroliga mängden (eller?) av 60 l. Redan vid denna mängdökning märktes hur kvaliteten stabiliserades mellan bryggningarna och med denna insikt började drömmen om ett fullskaligt bryggeri infinna sig på allvar.\n\nBrygghusets mål är att utmana det för många självklara valet en \"stor stark\" på restaurangen eller krogen genom att erbjuda spännande och moderna alternativ. Med en stor passion för hantverksarbetet bakom ölen hoppas vi kunna intressera såväl erfarna som oerfarna ölentusiaster.",
+        "founded": "2012",
+        "location": "Landskrona",
+        "brewers": "Jonathan Kårström, Simon Frennberg and Petter Lindholm",
+        "imageFileName": "BrygghusetFinn.jpg",
+        "onlinePresence": "Website",
+        "addressUrl": "https://www.brygghusetfinn.se/hem"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.2321027, 55.5072188]
+      },
+      "properties": {
+        "id": 10005,
+        "name": "Chad Beer",
+        "description": "Vi är Chad Beer, ett litet mikrobryggeri i hjärtat av Svedala ca 20 minuters bilfärd från Malmö. Vi slog upp portarna til vårt egna bryggeri hösten 2015. Allt började dock för 14 år sedan när Chad jobbade i USA och förälskade sig i Amerikanskt mikrobrygd öl.\n\nPassionen för ölbryggning väcktes och åren som följde förvandlade kök till bryggeri och garderober till ölförvaring.\n\nNamnet ”Chad Beer” började som ett märkligt arbetsnamn och har sedan dess visat sig omöjligt att skaka av, trots ansträngningar från sin olyckliga skapare.\n\nTanken med vårt öl har sedan början varit att skapa ett välbalanserat och smakrikt öl utan onödigt hög alkoholhalt. Ölen ska dessutom passa bra till mat eller dessert.",
+        "founded": "2015",
+        "location": "Svedala",
+        "brewers": "Chad Paton",
+        "imageFileName": "ChadBeer.jpg",
+        "onlinePresence": "Website",
+        "addressUrl": "https://www.chadbeer.se"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.3657612, 56.023399]
+      },
+      "properties": {
+        "id": 10006,
+        "name": "Charlis Brygghus",
+        "description": "Mitt namn är Kasper Schönhult och jag är konstnärn med en touch av galen professor. Med mig har jag min styrman Cristofer Silva som gör att allting fungerar. Utan honom skulle jag stå där själv i bryggeriet utan att få ut nån öl.\n\nPå Charlis brygger vi öl för att det är gott, spännande och ska smaka samma varje gång. För oss är det lika betydelsefullt att möta våra kunder på ölskola varje vecka som det är att producera öl.\n\nCharlis Brygghus vill lära fler att dricka mindre med högre kvalité.\n- Ni kan säkert hitta en ölproducent närmare er.\n- Ni kan absolut hitta en billigare.\n- Ni kan också få öl som smakar mindre eller jättemycke mer. Men ...\n\nVi har sveriges mest välsmakande lageröl, supertrevliga ölskolor och hos oss kan ni få brygga er egen öl..\nVi är seriösa, tramsiga och sjukt galna som gör allt med malt i. Och ibland också äpple, päron och hallon.\nVi brygger öl på allt och med alla - kom och häng mä oss!",
+        "founded": "2011",
+        "location": "Fjälkinge",
+        "brewers": "Kasper Schönhult",
+        "imageFileName": "CharlisBrygghus.jpg",
+        "onlinePresence": "Website",
+        "addressUrl": "hhttps://charlis.se/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.5800545, 55.8796014]
+      },
+      "properties": {
+        "id": 10007,
+        "name": "Fulltofta Gårdsbryggeri",
+        "description": "Fulltofta Gårdsbryggeri är ett mikrobryggeri vid Ringsjön mitt i Skåne. Hos oss bryggs det hantverksmässig öl baserat på de bästa råvaror vi kan hitta. Vi är entusiaster som drivs av passion och vilja att göra god öl, av många spännande typer, som passar de flesta.\n\nUnder 2018 flyttas produktionen till nya lokaler och en hel del ny modern utrustning kommer att driftsättas. Allt för att kunna brygga fler nya öltyper samtidigt som vår öl inte ska vara slutsåld på Systembolaget.\n\nVår öl finns tillgänglig på restauranger i Skåne och på de närliggande Systembolagen.",
+        "founded": "2014",
+        "location": "Hörby",
+        "brewers": "Anders och Agneta",
+        "imageFileName": "Brewski.jpg",
+        "onlinePresence": "Website",
+        "addressUrl": "http://www.fulltoftabryggeri.se/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.7023434, 56.0341081]
+      },
+      "properties": {
+        "id": 10008,
+        "name": "Helsingborgs Bryggeri",
+        "description": "Vi på Helsingborgs Bryggeri sa redan från början att vi ville brygga gott öl med stort hjärta. Det handlar om att förädla råvaror med respekt och samtidigt behålla den starka förankringen i Skånsk bryggarkultur.\n\n \n\nDet gamla Helsingborgs Bryggeri hade ju en lång och gedigen historia mellan 1850 och 1967, innan det startades upp igen av två ölentusiaster 2010. Nu är vi Nordvästra Skånes första mikrobryggeri och vi gör allt för att föra den goda traditionen vidare. Idag finns, förutom de två huvudägarna, ca 140 andelsägare.\n\nVårt första öl – Helsingborgs Lager – blev utsedd till \"Bästa ljusa Lager 2011\" på Gothenburg Beer Festival i september 2011. Sanningen är att det handlar lika mycket om att välja rätt malt och humle, som att hitta en bryggare med känsla för varje ölsorts särskilda karaktär.\n\n \n\nVi fokuserar på fina råvaror, hantverksskicklighet och precision. Ölsorterna konkurrerar om kunder som föredrar ett kvalitativt och spännande sortiment framför ett lågt pris.\n\nVerksamheten finns i en byggnad från 1880, bara ett stenkast från det ursprungliga Helsingborgs Bryggeri, där vi idag arbetar med modern bryggerianläggning och kunnig bryggare. Den lokala förankringen är och förblir en viktig del av bryggeriets identitet och marknadsföring.På plats finns maltkross, bryggarrum, lagertankar, tappning och etikettering, personalutrymme och konferensrum/provningsrum.\n\n \n\nPå så sätt har vi samlat genuint, skånskt hantverkskunnande med en tro på det goda i livet.\n\nVälkommen att besöka oss",
+        "founded": "2010",
+        "location": "Helsingborg",
+        "brewers": "-",
+        "imageFileName": "HelsingborgsBryggeri.png",
+        "onlinePresence": "Website",
+        "addressUrl": "https://www.helsingborgsbryggeri.se"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [12.9758973, 55.5527252]
+      },
+      "properties": {
+        "id": 10009,
+        "name": "Hyllie Bryggeri",
+        "description": "Hyllie Bryggeri är ett hantverksbryggeri från Malmös utkanter, precis där den livfulla och kontinentala stadsdelen Hyllie möter de skånska vidderna. På Hyllie Bryggeri brygger vi öl med hjärtat och med varsam respekt för råvarorna. Vare sig det är en tysk Pilsner eller en amerikansk IPA så är en sak säker; vi kompromissar aldrig med kvaliteten.",
+        "founded": "2015",
+        "location": "Malmö - Hyllie",
+        "brewers": "Michael Nathhorst, Erik Frithiof och Johan Lagercrantz",
+        "imageFileName": "HyllieBryggeri.webp",
+        "onlinePresence": "Website",
+        "addressUrl": "https://www.hylliebryggeri.se/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [13.309099, 55.8452379]
+      },
+      "properties": {
+        "id": 10043,
         "name": "Uncharted Brewery",
         "description": "The Uncharted Brewing Company was founded by Irishman Diarmuid Reidy in 2016, after moving with his young family to Sweden. He was driven by a desire to make good beer and share it with the world.\n\nDiarmuid grew up on a dairy farm in the south west part of Ireland. He studied to become a Mechanical Engineer but has since worked in IT.",
         "founded": "2016",
