@@ -29,6 +29,7 @@ class BreweryWebsiteFragment : Fragment() {
         customActionBar(activity as AppCompatActivity, chosenBreweryArgs.breweryAddressName)
         val breweryWebsiteAddress = chosenBreweryArgs.breweryAddressUrl
         Timber.d(breweryWebsiteAddress)
+        breweryWebView.settings.javaScriptEnabled = true
         breweryWebView.loadUrl(breweryWebsiteAddress)
     }
 }
