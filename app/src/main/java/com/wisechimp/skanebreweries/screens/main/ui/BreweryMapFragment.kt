@@ -40,7 +40,6 @@ class BreweryMapFragment : Fragment(), MapboxMap.OnMapClickListener {
         mapView.getMapAsync { mapboxMap ->
             this.mapboxMap = mapboxMap
             mapboxMap.setStyle(Style.Builder().fromUri("mapbox://styles/wisechimp/ckfcbn7vt1sgl19mrfr9nmqz6"))
-
             mapboxMap.addOnMapClickListener(this)
         }
     }
